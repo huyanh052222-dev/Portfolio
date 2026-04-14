@@ -1,0 +1,11 @@
+/* Variables */
+@import './Variables/color.css';
+@import './Variables/spacing.css';
+
+/* Component */
+@import './Components/header.css';
+@import './Components/footer.css';
+
+/* Pages style */
+@import './Pages/community.css';
+@import './Pages/projectList.css';
