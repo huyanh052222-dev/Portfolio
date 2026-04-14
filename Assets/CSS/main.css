@@ -1,6 +1,7 @@
 /* Variables */
 @import './Variables/color.css';
 @import './Variables/spacing.css';
+@import './Variables/shadow.css';
 
 /* Component */
 @import './Components/header.css';
@@ -9,3 +10,9 @@
 /* Pages style */
 @import './Pages/community.css';
 @import './Pages/projectList.css';
+
+* {
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}

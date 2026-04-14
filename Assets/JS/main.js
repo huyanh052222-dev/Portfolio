@@ -12,4 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadComponent("header-placeholder", "../Components/header.html");
+    // loadComponent("button-placeholder", "../Components/header.html");
+    // loadComponent("button-placeholder", "../Components/header.html");
 });

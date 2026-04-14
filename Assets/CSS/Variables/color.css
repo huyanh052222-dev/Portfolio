@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #4080ffd3;
+    --second-color: rgba(3, 3, 3, 0.913);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.second-color {
+    color: var(--second-color);
+}
