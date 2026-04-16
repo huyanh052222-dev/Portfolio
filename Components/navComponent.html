@@ -1,0 +1,55 @@
+<nav class="navbar">
+    <ul class="nav-list">
+        <li class="nav-item active">
+            <a href="#" aria-label="Home">
+                <div class="nav-content">
+                    <span class="text">Home</span>
+                    <span class="icon"><i class="fa-house"></i></span>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" aria-label="Likes">
+                <div class="nav-content">
+                    <span class="text">Likes</span>
+                    <span class="icon"><i class="fa-heart"></i></span>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" aria-label="Search">
+                <div class="nav-content">
+                    <span class="text">Search</span>
+                    <span class="icon"><i class="fa-search"></i></span>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" aria-label="Profile">
+                <div class="nav-content">
+                    <span class="text">Profile</span>
+                    <span class="icon"><i class="fa-profile"></i></span>
+                </div>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" aria-label="Settings">
+                <div class="nav-content">
+                    <span class="text">Settings</span>
+                    <span class="icon"><i class="fa-settings"></i></span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+<script>
+    const navList = document.querySelector(".nav-list");
+    const navItems = document.querySelectorAll(".nav-item");
+
+    navList.addEventListener('click', (e) => {
+        const clickedItem = e.target.closest(".nav-item");
+        if (!clickedItem) return;
+        navItems.forEach(nav => nav.classList.remove('active'));
+        clickedItem.classList.add('active');
+    });
+</script>
