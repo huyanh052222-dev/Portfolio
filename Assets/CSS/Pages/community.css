@@ -14,9 +14,14 @@
     color: var(--primary-color);
 }
 
-.list-user {
+.list-users {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.user-slot{
+    width: fit-content;
+    margin: 0;
 }

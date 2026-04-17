@@ -1,6 +1,8 @@
 :root {
     --primary-color: #4080ffd3;
     --second-color: rgba(3, 3, 3, 0.913);
+    --light-color: #fafafa;
+    --light-color-darker: #f1f1f1;
     --primary-gradient: linear-gradient(to bottom right, #00c6ff, #0072ff);
     
     /* Nav-Header Component Color and Effect */
