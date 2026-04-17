@@ -1,0 +1,12 @@
+.user-hero-section {
+    background-color: var( --light-color);
+    border: 1px solid var(--light-color-darker);
+
+    box-shadow: var(--premium-shadow);
+    border-radius: 30px;
+    margin-top: 30px;
+    height: fit-content;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+}
