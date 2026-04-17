@@ -8,13 +8,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // 1. Hàm nạp component đơn lẻ (Giữ nguyên)
     async function loadSingleComponent(id, path) {
-        try {
-            const response = await fetch(path);
-            const data = await response.text();
-            const element = document.getElementById(id);
-            if (element) element.innerHTML = data;
-        } catch (error) { console.error(error); }
+    try {
+        const response = await fetch(path);
+        const data = await response.text();
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = data;
+            if (id === "nav-header") {
+                setActiveNav();
+            }
+        }
+    } catch (error) { 
+        console.error(error); 
     }
+}
 
     // 2. Hàm nạp danh sách card VÀ đổ dữ liệu (Hợp nhất tại đây)
     async function loadUserCards(className, path, dataList) {
@@ -54,4 +61,20 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Nạp card và truyền mảng dữ liệu vào
     loadUserCards("user-slot", "../Components/card-user.html", userData);
+    
+    function setActiveNav() {
+        const path = window.location.pathname;
+
+        let currentPage = path.split("/").pop().replace(".html", "");
+
+        if (currentPage === "") currentPage = "index";
+
+        const navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach(item => {
+            const page = item.dataset.page;
+
+            item.classList.toggle("active", page === currentPage);
+        });
+    }
 });

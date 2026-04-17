@@ -1,6 +1,6 @@
 <nav class="navbar">
     <ul class="nav-list">
-        <li class="nav-item active">
+        <li class="nav-item" data-page="index">
             <a href="../index.html" aria-label="Home">
                 <div class="nav-content">
                     <span class="text">Trang Chủ</span>
@@ -8,7 +8,7 @@
                 </div>
             </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-page="community">
             <a href="../Pages/community.html" aria-label="Community">
                 <div class="nav-content">
                     <span class="text">Cộng Đồng</span>
@@ -16,7 +16,7 @@
                 </div>
             </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" data-page="projectList">
             <a href="../Pages/projectList.html" aria-label="Projects">
                 <div class="nav-content">
                     <span class="text">Các Dự Án</span>
@@ -26,14 +26,3 @@
         </li>
     </ul>
 </nav>
-<script>
-    const navList = document.querySelector(".nav-list");
-    const navItems = document.querySelectorAll(".nav-item");
-
-    navList.addEventListener('click', (e) => {
-        const clickedItem = e.target.closest(".nav-item");
-        if (!clickedItem) return;
-        navItems.forEach(nav => nav.classList.remove('active'));
-        clickedItem.classList.add('active');
-    });
-</script>
