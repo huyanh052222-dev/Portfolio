@@ -1,0 +1,12 @@
+:root {
+    --text-32: 32px;
+    --text-20: 20px;
+}
+
+.tieuDe-32 {
+    font-size: var(--text-32);
+}
+
+.tieuDe-20 {
+    font-size: var(--text-20);
+}

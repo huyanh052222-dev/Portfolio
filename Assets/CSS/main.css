@@ -2,10 +2,12 @@
 @import './Variables/color.css';
 @import './Variables/spacing.css';
 @import './Variables/shadow.css';
+@import './Variables/text.css';
 
 /* Component */
-@import './Components/header.css';
+@import './Components/navComponent.css';
 @import './Components/footer.css';
+@import './Components/button-header.css';
 
 /* Pages style */
 @import './Pages/community.css';
@@ -15,4 +17,38 @@
     margin: 0 auto;
     transition: all 0.3s ease;
     font-family: 'Inter', sans-serif;
+}
+
+/* ========== Avatar của người sử dụng ========== */
+.avatar {
+    background-image: url(../Images/Users/Avatars/Test_Avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* ========== Setting Page chung ========== */
+.container {
+    width: var(--mw-container);
+}
+.wrap-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-BCN {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-BCN:hover {
+    transform: scale(1.05);
+    color: var(--primary-color);
 }

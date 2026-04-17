@@ -1,6 +1,16 @@
 :root {
     --primary-color: #4080ffd3;
     --second-color: rgba(3, 3, 3, 0.913);
+    --primary-gradient: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    
+    /* Nav-Header Component Color and Effect */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: 15px;
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.6);
 }
 
 .primary-color {

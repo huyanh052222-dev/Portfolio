@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error(error));
     }
 
-    loadComponent("header-placeholder", "../Components/header.html");
-    // loadComponent("button-placeholder", "../Components/header.html");
+    loadComponent("nav-header", "../Components/navComponent.html");
+    loadComponent("button-header", "../Components/button-header.html");
     // loadComponent("button-placeholder", "../Components/header.html");
 });
