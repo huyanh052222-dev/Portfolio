@@ -6,11 +6,28 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../Assets/CSS/main.css">
-    <script defer src="../Assets/JS/main.js"></script>
+    <script src="../Assets/JS/Data/data.js"></script>
+    <script defer src="../Assets/JS/Pages/user-details.js"></script>
 </head>
 <body>
     <div id="nav-header" class="container"></div>
 
-    <div class="user-hero-section container">A</div>
+    <div class="user-hero-section container">
+        <div class="user-detail-card">
+            <div class="avatar-wrapper">
+                <img id="detail-avatar" src="" alt="Avatar">
+            </div>
+            <h1 id="detail-name">Đang tải...</h1>
+            <p id="detail-stats"></p>
+            
+            <hr>
+            <div class="user-bio">
+                <h3>Giới thiệu</h3>
+                <p>Đây là trang chi tiết dành cho người dùng có ID: <span id="display-id"></span></p>
+            </div>
+            
+            <a href="../Pages/community.html" class="btn-back">Quay lại danh sách</a>
+        </div>
+    </div>
 </body>
 </html>
