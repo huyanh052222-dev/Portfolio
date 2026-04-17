@@ -81,7 +81,7 @@
 }
 
 .text {
-    color: var(--text-muted);
+    color: var(--second-color);
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -106,48 +106,28 @@
     width: 24px;
     height: 24px;
     background: var(--primary-gradient);
-    -webkit-mask: url("img/ic_round-home.svg") no-repeat center;
-    mask: url("img/ic_round-home.svg") no-repeat center;
+    -webkit-mask: url("../../Images/Icons/ic_round-home.svg") no-repeat center;
+    mask: url("../../Images/Icons/ic_round-home.svg") no-repeat center;
     -webkit-mask-size: contain;
     mask-size: contain;
 }
 
-.fa-heart {
+.fa-community {
     width: 24px;
     height: 24px;
     background: var(--primary-gradient);
-    -webkit-mask: url("../img/mdi_heart.svg") no-repeat center;
-    mask: url("img/mdi_heart.svg") no-repeat center;
+    -webkit-mask: url("../../Images/Icons/boxicons_community-filled.svg") no-repeat center;
+    mask: url("../../Images/Icons/boxicons_community-filled.svg") no-repeat center;
     -webkit-mask-size: contain;
     mask-size: contain;
 }
 
-.fa-profile {
+.fa-projects {
     width: 24px;
     height: 24px;
     background: var(--primary-gradient);
-    -webkit-mask: url("img/qlementine-icons_user-16.svg") no-repeat center;
-    mask: url("img/qlementine-icons_user-16.svg") no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-}
-
-.fa-search {
-    width: 24px;
-    height: 24px;
-    background: var(--primary-gradient);
-    -webkit-mask: url("img/iconoir_search.svg") no-repeat center;
-    mask: url("img/iconoir_search.svg") no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-}
-
-.fa-settings {
-    width: 24px;
-    height: 24px;
-    background: var(--primary-gradient);
-    -webkit-mask: url("img/weui_setting-filled.svg") no-repeat center;
-    mask: url("img/weui_setting-filled.svg") no-repeat center;
+    -webkit-mask: url("../../Images/Icons/ant-design_project-filled.svg") no-repeat center;
+    mask: url("../../Images/Icons/ant-design_project-filled.svg") no-repeat center;
     -webkit-mask-size: contain;
     mask-size: contain;
 }
