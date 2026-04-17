@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #4080ffd3;
+    --primary-color: #1d83ff;
     --second-color: rgba(3, 3, 3, 0.913);
-    --light-color: #fafafa;
+    --light-color: #fefefe;
     --light-color-darker: #f1f1f1;
     --primary-gradient: linear-gradient(to bottom right, #00c6ff, #0072ff);
     

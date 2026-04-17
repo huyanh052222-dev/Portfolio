@@ -38,3 +38,17 @@
     object-fit: cover;
     object-position: center;
 }
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.name-slot, .stat-slot {
+    color: var(--second-color);
+}
+
+.name-slot:hover {
+    color: var(--primary-color);
+}
