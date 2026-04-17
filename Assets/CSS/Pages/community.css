@@ -1,0 +1,22 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-BCN {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-BCN:hover {
+    transform: scale(1.05);
+    color: var(--primary-color);
+}
+
+.list-user {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}

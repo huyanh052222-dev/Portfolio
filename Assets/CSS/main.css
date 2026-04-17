@@ -5,9 +5,11 @@
 @import './Variables/text.css';
 
 /* Component */
+@import './Components/header.css';
 @import './Components/navComponent.css';
 @import './Components/footer.css';
 @import './Components/button-header.css';
+@import './Components/card-user.css';
 
 /* Pages style */
 @import './Pages/community.css';
@@ -34,21 +36,6 @@
 .wrap-page {
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
     gap: 30px;
-}
-
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.link-BCN {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.link-BCN:hover {
-    transform: scale(1.05);
-    color: var(--primary-color);
 }

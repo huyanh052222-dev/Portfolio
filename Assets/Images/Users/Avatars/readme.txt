@@ -1,0 +1,1 @@
+Trong này lưu avatar người dùng
