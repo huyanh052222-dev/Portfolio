@@ -1,5 +1,7 @@
+@import './button-header.css';
+
 header {
-    padding: 10px 160px 10px 160px;
+    padding: 20px 160px 10px 160px;
     /* background-color: rgb(250, 250, 250); */
 }
 
@@ -9,7 +11,7 @@ header .wrapper {
     border-radius: 30px;
     height: 80px;
     align-items: center;
-    background-color: aliceblue;
+    background-color: rgb(240, 246, 251);
 }
 
 .wrapper:hover {
@@ -18,6 +20,7 @@ header .wrapper {
 
 .logo {
     font-size: 24px;
+    text-decoration: none;
 }
 
 .nav-item {
@@ -28,4 +31,17 @@ header .wrapper {
 .nav-item:hover {
     color: var(--primary-color) !important;
     /* Không loại bỏ importance này vì nó có tác dụng để ấy màu cho hover!!!! */
+}
+
+.action-area {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(235, 235, 235);
 }

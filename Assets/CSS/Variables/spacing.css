@@ -1,0 +1,7 @@
+:root {
+    --mw-container: 1280px;
+    
+    /* Nav-Header Component */
+    --nav-height: 65px;
+    --btn-width: 110px;
+}

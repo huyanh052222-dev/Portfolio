@@ -1,0 +1,7 @@
+.button-header {
+    background-color: var(--primary-color);
+    color: rgb(246, 246, 246);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
