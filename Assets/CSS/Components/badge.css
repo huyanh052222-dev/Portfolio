@@ -1,0 +1,116 @@
+/* Section */
+.badge-section {
+    margin-top: 40px;
+}
+
+.badge-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: rgb(68, 68, 68);
+}
+
+/* Grid */
+.badge-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Badge base */
+.badge {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Icon */
+.badge-icon {
+    font-size: 28px;
+}
+
+.badge-icon img {
+    width: 88px;
+    height: 100px;
+}
+
+/* Tooltip */
+.badge-tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 160px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s;
+    background: #111827;
+}
+
+/* Tooltip title */
+.badge-tooltip h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+/* Tooltip text */
+.badge-tooltip p {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+/* Hover effect */
+.badge:hover {
+    transform: scale(1.1);
+}
+
+.badge:hover .badge-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+
+/* Purple */
+.badge-purple {
+    border: 2px solid #7A5CFF;
+    box-shadow: 0 0 15px rgba(122,92,255,0.5);
+}
+.badge-purple .badge-tooltip {
+    border: 1px solid #7A5CFF;
+}
+.badge-purple .badge-tooltip h4 {
+    color: #7A5CFF;
+}
+
+/* Green */
+.badge-green {
+    border: 2px solid #22C55E;
+    box-shadow: 0 0 15px rgba(34,197,94,0.5);
+}
+.badge-green .badge-tooltip {
+    border: 1px solid #22C55E;
+}
+.badge-green .badge-tooltip h4 {
+    color: #22C55E;
+}
+
+/* Yellow */
+.badge-yellow {
+    border: 2px solid #FACC15;
+    box-shadow: 0 0 15px rgba(250,204,21,0.5);
+}
+.badge-yellow .badge-tooltip {
+    border: 1px solid #FACC15;
+}
+.badge-yellow .badge-tooltip h4 {
+    color: #FACC15;
+}
