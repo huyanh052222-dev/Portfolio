@@ -4,40 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ sơ năng lực | Portfolio</title>
-    <!-- Google Fonts: Be Vietnam Pro & Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Assets/CSS/main.css">
 
-    <script defer src="../Assets/JS/Data/data.js"></script>
-    <script defer src="../Assets/JS/main.js"></script>
-    <script defer src="../Assets/JS/Pages/user-details.js"></script>
-
+    <script src="../Assets/JS/Data/data.js"></script>
+    <script src="../Assets/JS/main.js"></script>
+    <script src="../Assets/JS/Pages/user-details.js"></script>
 </head>
 <body>
     <div id="nav-header" class="container"></div>
 
+    <div id="breadcrumb-placeholder" class="container"></div>
+
     <div class="wrap-page">
         <div class="container">
             <div class="bento-grid">
-                <!-- Hero Header -->
                 <div class="hero-area">
                     <h2 class="main-title">
                         <span>Modern</span>
                         <span>Engineering</span>
-                        <span style="font-size: 32px; letter-spacing: 0; font-weight: 400; font-family: 'Be Vietnam Pro';">Building Digital Excellence</span>
+                        <span style="font-size: 32px; letter-spacing: 0; font-weight: 400;">Building Digital Excellence</span>
                     </h2>
                 </div>
     
-                <!-- Profile Block với Level & XP Bar -->
                 <div class="bento-card profile-area">
                     <div class="tag-member">Verified Partner</div>
                     <div class="avatar-container">
                         <div class="avatar-glow"></div>
                         <img id="detail-avatar" src="" alt="Avatar">
-                        <div class="level-badge" id="user-level">Lv. 10</div>
+                        <div class="level-badge" id="user-level">Lv. --</div>
                     </div>
-                    <h1 id="detail-name"></h1>
-                    <p id="detail-stats-label" style="color: var(--second-color); font-size: 14px; font-weight: 600; margin-top: 5px;">UID: 2026-X</p>
+                    <h1 id="detail-name">Đang tải tên...</h1>
+                    <p id="detail-stats-label" style="color: var(--second-color); font-size: 14px; font-weight: 600; margin-top: 5px;">UID: ...</p>
                     
                     <div class="xp-container">
                         <div class="xp-label">
@@ -51,23 +48,18 @@
     
                     <div style="margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 20px; width: 80%;">
                         <div style="font-size: 11px; text-transform: uppercase; font-weight: 800; color: var(--second-color);">Current Role</div>
-                        <div style="font-weight: 700; color: var(--p-color);">Senior Developer</div>
+                        <div id="detail-rank" style="font-weight: 700; color: var(--primary-color);">Đang xác định...</div>
                     </div>
                 </div>
     
-                <!-- Bio Block -->
                 <div class="bento-card bio-area">
                     <div class="floating-badge">HỢP TÁC VỚI TÔI</div>
-                    <div class="section-title">Liên hệ</div>
+                    <div class="section-title">Giới thiệu</div>
                     <p class="bio-para">
-                        Với hơn 5 năm kinh nghiệm thực chiến trong lĩnh vực phát triển phần mềm, mình tập trung vào việc tạo ra các giải pháp công nghệ bền vững, có khả năng mở rộng cao và tối ưu hóa trải nghiệm người dùng cuối. 
-                    </p>
-                    <p class="bio-para">
-                        Mình tin rằng mỗi dòng code đều mang một sứ mệnh cải thiện cuộc sống thông qua tự động hóa và thông tin minh bạch.
+                        Với hơn 5 năm kinh nghiệm thực chiến trong lĩnh vực phát triển phần mềm, mình tập trung vào việc tạo ra các giải pháp công nghệ bền vững.
                     </p>
                 </div>
     
-                <!-- Skills Block -->
                 <div class="bento-card skills-area">
                     <div class="section-title">Core Stack</div>
                     <div class="skill-tag">JavaScript / TypeScript</div>
@@ -76,7 +68,6 @@
                     <div class="skill-tag">UI/UX Design Systems</div>
                 </div>
     
-                <!-- Experience Block -->
                 <div class="bento-card exp-area">
                     <div class="section-title">Experience</div>
                     <div class="exp-item">
@@ -87,36 +78,27 @@
                         <div class="exp-year">2022 - 2024</div>
                         <div class="exp-title">Senior Software Engineer</div>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-year">2020 - 2022</div>
-                        <div class="exp-title">Junior Developer</div>
-                    </div>
                 </div>
     
-                <!-- Project Block -->
                 <div class="bento-card project-area">
                     <div class="section-title">Dự án gần nhất</div>
-                    <p style="font-size: 13px; color: var(--second-color); margin: 0;">Hệ thống quản lý dữ liệu thời gian thực cho doanh nghiệp Fintech.</p>
-                    <div class="project-preview">PREVIEW</div>
+                    <p style="font-size: 13px; color: var(--second-color); margin: 0;">Hệ thống quản lý dữ liệu thời gian thực Fintech.</p>
+                    <div class="project-preview" style="background: #f1f5f9; border-radius: 16px; height: 80px; margin-top: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--text-sub);">PREVIEW</div>
                 </div>
     
-                <!-- Stats Block -->
                 <div class="bento-card stats-area">
                     <div>
                         <div class="stat-val">98%</div>
-                        <div style="text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 2px;">Tỉ lệ thành công</div>
+                        <div style="text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: 2px;">Success Rate</div>
                     </div>
                 </div>
     
-                <!-- Contact Block -->
                 <div class="bento-card contact-area">
-                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.56.216.96.474 1.38.894.42.42.678.82.894 1.38.163.422.358 1.057.412 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.216.56-.474.96-.894 1.38-.42.42-.82.678-1.38.894-.422.163-1.057.358-2.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.56-.216-.96-.474-1.38-.894-.42-.42-.678-.82-.894-1.38-.163-.422-.358-1.057-.412-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.216-.56.474-.96.894-1.38.42-.42.82-.678 1.38-.894.422-.163 1.057-.358 2.227-.412 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.15.26-2.914.557-.79.307-1.459.717-2.126 1.384-.667.667-1.077 1.336-1.384 2.126-.298.764-.501 1.637-.558 2.914-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.057 1.277.26 2.15.558 2.914.307.79.717 1.459 1.384 2.126.667.667 1.336 1.077 2.126 1.384.764.298 1.637.501 2.914.558 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.277-.057 2.15-.26 2.914-.557.79-.307 1.459-.717 2.126-1.384.667-.667 1.077-1.336 1.384-2.126.298-.764.501-1.637.558-2.914.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.057-1.277-.26-2.15-.558-2.914-.307-.79-.717-1.459-1.384-2.126-.667-.667-1.336-1.077-2.126-1.384-.764-.298-1.637-.501-2.914-.558-1.28-.058-1.688-.072-4.947-.072z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <svg viewBox="0 0 24 24" style="width: 24px; fill: var(--text-sub);"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </div>
     
-                <!-- Action Card -->
                 <a href="#" class="bento-card actions-area">
-                    <span>Liên lạc</span>
+                    <span>Liên lạc ngay</span>
                 </a>
             </div>
         </div>
@@ -130,11 +112,119 @@
                     <span class="total-count">3 huy chương</span>
                 </div>
             </div>
-            
-            <div id="badge-section" class="badge-list">
-                
-            </div>
+            <div id="badge-section" class="badge-list"></div>
         </div>
+
+        <section class="project-section-wrap container">
+        <!-- Header của Section -->
+        <header class="section-header">
+            <div class="section-title-group">
+                <span class="section-label">Danh mục sản phẩm</span>
+                <h2 class="section-main-title">Dự án tiêu biểu</h2>
+            </div>
+        </header>
+
+        <!-- Grid chứa 4 dự án -->
+        <div class="project-grid-v3">
+            
+            <!-- Dự án 1 -->
+            <div class="project-card-v3">
+                <div class="card-image-wrapper">
+                    <div class="card-badges">
+                        <span class="category-badge">UI/UX</span>
+                        <div class="status-dot"></div>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-date"><span>29/09/2025</span></div>
+                    <h3 class="card-title">Design Wireframe Project 1</h3>
+                    <p class="card-desc">Thiết kế dự án project 1 bằng Figma, chuẩn hoá và đồng bộ thư viện UI Kit cho toàn hệ thống.</p>
+                    <div class="card-divider"></div>
+                    <div class="card-footer">
+                        <div class="author-box">
+                            <div class="author-avatar-fallback" style="background: #90d5ff;">H</div>
+                            <span class="author-name">Huy Ly</span>
+                        </div>
+                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dự án 2 -->
+            <div class="project-card-v3">
+                <div class="card-image-wrapper">
+                    <div class="card-badges">
+                        <span class="category-badge badge-backend">Backend</span>
+                        <div class="status-dot"></div>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-date"><span>15/10/2025</span></div>
+                    <h3 class="card-title">Hệ thống API Fintech</h3>
+                    <p class="card-desc">Xây dựng hệ thống API bảo mật cao bằng Node.js và PostgreSQL, xử lý 10,000 giao dịch mỗi giây.</p>
+                    <div class="card-divider"></div>
+                    <div class="card-footer">
+                        <div class="author-box">
+                            <div class="author-avatar-fallback" style="background: #34495e;">A</div>
+                            <span class="author-name">Anh Tuan</span>
+                        </div>
+                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dự án 3 -->
+            <div class="project-card-v3">
+                <div class="card-image-wrapper">
+                    <div class="card-badges">
+                        <span class="category-badge badge-frontend">Frontend</span>
+                        <div class="status-dot"></div>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1722156533656-b22cbcf1c82e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-date"><span>02/11/2025</span></div>
+                    <h3 class="card-title">E-commerce Dashboard</h3>
+                    <p class="card-desc">Giao diện quản lý bán hàng đa kênh tích hợp biểu đồ phân tích Real-time bằng React và Chart.js.</p>
+                    <div class="card-divider"></div>
+                    <div class="card-footer">
+                        <div class="author-box">
+                            <div class="author-avatar-fallback" style="background: #3498db;">M</div>
+                            <span class="author-name">Minh Khôi</span>
+                        </div>
+                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dự án 4 -->
+            <div class="project-card-v3">
+                <div class="card-image-wrapper">
+                    <div class="card-badges">
+                        <span class="category-badge">Research</span>
+                        <div class="status-dot" style="background: #94a3b8; box-shadow: none;"></div>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1719930119165-f60297c43ee9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-date"><span>12/12/2025</span></div>
+                    <h3 class="card-title">AI Content Optimization</h3>
+                    <p class="card-desc">Nghiên cứu ứng dụng trí tuệ nhân tạo vào việc tối ưu hoá nội dung và trải nghiệm người dùng.</p>
+                    <div class="card-divider"></div>
+                    <div class="card-footer">
+                        <div class="author-box">
+                            <div class="author-avatar-fallback" style="background: #f43f5e;">L</div>
+                            <span class="author-name">Lan Anh</span>
+                        </div>
+                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     </div>
 
     <div id="footer-placeholder" class="container"></div>

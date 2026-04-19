@@ -11,6 +11,9 @@
 @import './Components/footer.css';
 @import './Components/card-user.css';
 @import './Components/badge.css';
+@import './Components/breadcrumb.css';
+@import './Components/project.css';
+
 
 /* Pages style */
 @import './Pages/community.css';
@@ -35,6 +38,7 @@
 .container {
     width: var(--mw-container);
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .wrap-page {
     display: flex;

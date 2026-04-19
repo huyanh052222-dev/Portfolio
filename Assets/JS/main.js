@@ -59,7 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
             await Promise.all([
                 loadSingleComponent("header-placeholder", "../Components/header.html"),
                 loadSingleComponent("footer-placeholder", "../Components/footer.html"),
-                loadSingleComponent("badge-section", "../Components/badge.html")
+                loadSingleComponent("badge-section", "../Components/badge.html"),
+                loadSingleComponent("breadcrumb-placeholder", "../Components/breadcrumb.html"),
+                loadSingleComponent("project-comp", "../Components/project.html")
             ]);
 
             await loadSingleComponent("nav-header", "../Components/navComponent.html");
