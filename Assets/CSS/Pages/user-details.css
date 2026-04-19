@@ -194,6 +194,79 @@ body {
     font-size: 30px;
 }
 
+/* Container bao bọc toàn bộ */
+.achievement-wrapper {
+    background: #ffffff;
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    margin-top: 20px;
+}
+
+/* Header chia làm 2 bên */
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.achievement-title {
+    font-size: 30px;
+    color: var(--primary-color); /* Sử dụng biến màu Indigo của bạn */
+    margin: 0;
+}
+
+.total-count {
+    font-size: 14px;
+    color: var(--text-sub);
+    font-weight: 500;
+}
+
+/* Danh sách Badge */
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Kiểu dáng chung cho từng Tag Badge */
+.badge-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    background: #ffffff;
+    border: 1px solid #eceef2;
+    border-radius: 100px; /* Bo tròn hoàn toàn */
+    font-size: 14px;
+    color: #1e293b;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.badge-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.badge-item strong {
+    /* font-weight: 800; */
+}
+
+/* Chấm tròn màu (Dot) */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Đổ màu cho từng loại huy chương */
+.gold .dot    { background-color: #f59e0b; } /* Vàng */
+.silver .dot  { background-color: #94a3b8; } /* Bạc */
+.bronze .dot  { background-color: #d97706; } /* Đồng */
+.special .dot { background-color: #6366f1; } /* Đặc biệt */
+
 /* 7. RESPONSIVE (SMART FIX) */
 @media (max-width: 1100px) {
     .bento-grid { grid-template-columns: 1fr 1fr; grid-template-areas: "hero hero" "profile bio" "profile bio" "skills stats" "exp project" "contact actions"; }

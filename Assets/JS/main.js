@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     loadSingleComponent("footer-placeholder", "../Components/footer.html");
     loadSingleComponent("nav-header", "../Components/navComponent.html");
     loadSingleComponent("button-header", "../Components/button-header.html");
+    loadSingleComponent("badge-section", "../Components/badge.html");
 
     // Đảm bảo userData đã được nạp từ data.js
     if (typeof userData !== 'undefined') {

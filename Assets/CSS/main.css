@@ -6,10 +6,11 @@
 
 /* Component */
 @import './Components/header.css';
+@import './Components/button-header.css';
 @import './Components/navComponent.css';
 @import './Components/footer.css';
-@import './Components/button-header.css';
 @import './Components/card-user.css';
+@import './Components/badge.css';
 
 /* Pages style */
 @import './Pages/community.css';

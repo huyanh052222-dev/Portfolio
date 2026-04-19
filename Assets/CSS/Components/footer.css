@@ -69,8 +69,7 @@
 }
 
 .footer-links li:hover {
-    color: #00F5FF;
-    text-shadow: 0 0 8px #00F5FF;
+    color: var(--primary-color);
 }
 
 .footer-divider {
