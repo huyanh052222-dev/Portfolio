@@ -5,8 +5,14 @@
 
 .tieuDe-32 {
     font-size: var(--text-32);
+    width: fit-content;
 }
 
 .tieuDe-20 {
     font-size: var(--text-20);
+    width: fit-content;
+}
+
+.center-text {
+    margin: 0 auto;
 }

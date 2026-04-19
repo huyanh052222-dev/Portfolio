@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // --- THỰC THI ---
     loadSingleComponent("header-placeholder", "../Components/header.html");
+    loadSingleComponent("footer-placeholder", "../Components/footer.html");
     loadSingleComponent("nav-header", "../Components/navComponent.html");
     loadSingleComponent("button-header", "../Components/button-header.html");
 
