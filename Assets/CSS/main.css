@@ -27,6 +27,14 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    /* background: #f8fafc; */
+    background-image: var(--bg-mesh);
+    margin: 0;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
 /* ========== Avatar của người sử dụng ========== */
 .avatar {
     background-image: url(../Images/Users/Avatars/Test_Avatar.jpg);
