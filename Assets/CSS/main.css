@@ -13,7 +13,7 @@
 @import './Components/card-user.css';
 @import './Components/badge.css';
 @import './Components/breadcrumb.css';
-/* @import './Components/project.css'; */
+@import './Components/linkContact.css';
 
 
 /* Pages style */
@@ -26,14 +26,6 @@
     transition: all 0.3s ease;
     font-family: 'Inter', sans-serif;
 }
-
-body {
-    /* background: #f8fafc; */
-    background-image: var(--bg-mesh);
-    margin: 0;
-    color: var(--text-main);
-    line-height: 1.5;
-}   
 
 /* ========== Avatar của người sử dụng ========== */
 .avatar {

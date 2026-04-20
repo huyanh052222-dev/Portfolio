@@ -58,10 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             await Promise.all([
                 loadSingleComponent("header-placeholder", "../Components/header.html"),
+                loadSingleComponent("linkContact-placeholder", "../Components/linkContact.html"),
                 loadSingleComponent("footer-placeholder", "../Components/footer.html"),
                 loadSingleComponent("badge-section", "../Components/badge.html"),
                 loadSingleComponent("breadcrumb-placeholder", "../Components/breadcrumb.html"),
-                // loadSingleComponent("project-comp", "../Components/project.html")
+                loadSingleComponent("linkContact", "../Components/linkContact.html")
             ]);
 
             await loadSingleComponent("nav-header", "../Components/navComponent.html");
