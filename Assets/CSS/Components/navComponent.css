@@ -54,7 +54,7 @@
 
 .logo {
     text-decoration: none;
-    color: var(--second-color);
+    color: var(--text-main);
 }
 
 .nav-list {
@@ -93,7 +93,7 @@
 }
 
 .text {
-    color: var(--second-color);
+    color: var(--text-main);
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;

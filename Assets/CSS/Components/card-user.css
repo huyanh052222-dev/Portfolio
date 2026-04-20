@@ -19,6 +19,9 @@
 .card-user:hover {
     box-shadow: var(--premium-shadow-hover);
     transform: translateY(-5px);
+    .name-slot {
+        color: var(--primary-color);
+    }
 }
 
 .user-avatar {
@@ -47,9 +50,5 @@
 }
 
 .name-slot, .stat-slot {
-    color: var(--second-color);
-}
-
-.name-slot:hover {
-    color: var(--primary-color);
+    color: var(--text-main);
 }

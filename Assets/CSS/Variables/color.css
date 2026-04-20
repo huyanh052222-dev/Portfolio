@@ -1,17 +1,20 @@
 :root {
     --primary-color: #1d83ff;
-    --second-color: rgba(3, 3, 3, 0.913);
+    --second-color: rgba(255, 0, 162, 0.913);
     --light-color: #fefefe;
     --light-color-darker: #f1f1f1;
     --primary-gradient: linear-gradient(to bottom right, #00c6ff, #0072ff);
-    
+
+    --accent-color: #10b981;
+    --text-main: #0f172a;
+    --text-sub: #64748b;
+
     /* Nav-Header Component Color and Effect */
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-blur: 15px;
     --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 
-    --text-main: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
 }
 
@@ -19,6 +22,6 @@
     color: var(--primary-color);
 }
 
-.second-color {
-    color: var(--second-color);
+.text-color {
+    color: var(--text-main);
 }

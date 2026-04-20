@@ -1,21 +1,8 @@
 :root {
-    --accent-color: #10b981;
-    --text-main: #0f172a;
-    --text-sub: #64748b;
     --bg-mesh: radial-gradient(at 0% 0%, #f1f5f9 0, transparent 50%), 
                 radial-gradient(at 50% 0%, #e2e8f0 0, transparent 50%);
-    --radius: 30px;
-    --radius-lg: 32px;
-    --radius-md: 16px;
 }
 
-body {
-    background: #f8fafc;
-    background-image: var(--bg-mesh);
-    margin: 0;
-    color: var(--text-main);
-    line-height: 1.5;
-}
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -109,6 +96,11 @@ body {
     font-size: 20px;
 }
 
+.tag-member {
+    margin-top: 10px;
+    color: var(--accent-color);
+}
+
 .avatar-container { 
     position: relative; 
     width: 140px; 
@@ -145,7 +137,7 @@ body {
 .main-title { 
     font-size: 56px; 
     font-weight: 900; 
-    line-height: 0.9; 
+    line-height: 1.1; 
     text-transform: uppercase; 
     letter-spacing: -2px; 
 }
