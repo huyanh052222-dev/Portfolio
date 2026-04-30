@@ -197,16 +197,17 @@
 
 .search-input {
     width: 0px;
-    opacity: 0;
+    opacity: 1;
     height: 40px;
     border-radius: 10px;
     border: none;
     outline: none;
     padding: 0 16px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
-.search-input.active {
+/* Cho nay loi roi, mot sua lai!! */
+.search-input:active {
     width: 290px;
     opacity: 1;
     background-color: #fff;
@@ -224,13 +225,13 @@
     cursor: pointer;
     border-radius: 10px;
     z-index: 1;
-    fill: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    fill: var(--text-sub);
+    border: 1px solid var(--text-sub);
 }
 
 .search-icon:hover {
     transform: rotate(360deg);
-    transition: .2s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .vertical-line {
@@ -240,8 +241,8 @@
 }
 
 .bell {
-    width: 33px;
-    height: 33px;
+    width: 24px;
+    height: 24px;
     background-color: #8b8b8b;
     -webkit-mask: url("../../Images/Icons/mdi_bell-outline.svg") no-repeat center;
     mask: url("../../Images/Icons/mdi_bell-outline.svg") no-repeat center;
