@@ -9,6 +9,11 @@
     border: 1px solid #f1f5f9;
     margin-top: 30px;
 }
+.breadcrumb-container:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--premium-shadow);
+}
 
 .breadcrumb-list {
     list-style: none;
