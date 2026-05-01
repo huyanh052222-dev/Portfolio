@@ -112,10 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Tạo màu Gradient cho vùng phủ
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(99, 102, 241, 0.6)');
-        gradient.addColorStop(1, 'rgba(139, 92, 246, 0.1)');
+        gradient.addColorStop(0, 'rgba(0, 4, 255, 0.6)');
+        gradient.addColorStop(1, 'rgba(92, 192, 246, 0.1)');
 
-        const textColor = isDark ? '#e5e7eb' : '#1e293b';
+        const textColor = isDark ? '#e5e7eb' : '#25354d';
         const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
 
         if (skillChart) {
@@ -129,12 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 datasets: [{
                     label: 'Chỉ số năng lực',
                     data: currentSkills,
-                    borderColor: '#6366f1', 
+                    borderColor: '#1d83ff', 
                     borderWidth: 4,
                     backgroundColor: gradient,
                     tension: 0, // 0 = đường thẳng, 0.4 = đường cong
                     pointBackgroundColor: '#fff',
-                    pointBorderColor: '#6366f1',
+                    pointBorderColor: '#1d83ff',
                     pointBorderWidth: 2,
                     pointRadius: 5,
                     pointHoverRadius: 8,
