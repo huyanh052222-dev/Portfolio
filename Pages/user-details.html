@@ -9,6 +9,8 @@
     <script src="../Assets/JS/Data/data.js"></script>
     <script src="../Assets/JS/main.js"></script>
     <script src="../Assets/JS/Pages/user-details.js"></script>
+    <!-- <script src="../Assets/JS/component/skill-radar.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
 </head>
 <body>
     <div id="nav-header" class="container"></div>
@@ -33,12 +35,12 @@
                         <div class="level-badge" id="user-level">Lv. --</div>
                     </div>
                     <h1 id="detail-name">Đang tải tên...</h1>
-                    <p id="detail-stats-label" style="color: var(--text-main); font-size: 14px; font-weight: 600; margin-top: 5px;">UID: ...</p>
+                    <!-- <p id="detail-stats-label" style="color: var(--text-main); font-size: 14px; font-weight: 600; margin-top: 5px;">UID: ...</p> -->
                     
                     <div class="xp-container">
                         <div class="xp-label">
-                            <span>Quá trình kinh nghiệm</span>
-                            <span>75%</span>
+                            <span>Kinh nghiệm:</span>
+                            <span>1550 / 3000</span>
                         </div>
                         <div class="xp-track">
                             <div class="xp-fill"></div>
@@ -116,117 +118,119 @@
             <div id="badge-section" class="badge-list"></div>
         </div>
 
+        <div class="skill" id="skill"></div>
+
         <section class="project-section-wrap container">
         <!-- Header của Section -->
-        <header class="section-header">
-            <div class="section-title-group">
-                <span class="section-label">Danh mục sản phẩm</span>
-                <h2 class="section-main-title">Dự án tiêu biểu</h2>
-            </div>
-        </header>
-
-        <!-- Grid chứa 4 dự án -->
-        <div class="project-grid-v3">
-            <!-- Dự án đang đặt làm demo mẫu - không tuân theo Components -->
-            
-            <!-- Dự án 1 -->
-            <div class="project-card-v3">
-                <div class="card-image-wrapper">
-                    <div class="card-badges">
-                        <span class="category-badge">UI/UX</span>
-                        <div class="status-dot"></div>
-                    </div>
-                    <img src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+            <header class="section-header">
+                <div class="section-title-group">
+                    <span class="section-label">Danh mục sản phẩm</span>
+                    <h2 class="section-main-title">Dự án tiêu biểu</h2>
                 </div>
-                <div class="card-content">
-                    <div class="card-date"><span>29/09/2025</span></div>
-                    <h3 class="card-title">Design Wireframe Project 1</h3>
-                    <p class="card-desc">Thiết kế dự án project 1 bằng Figma, chuẩn hoá và đồng bộ thư viện UI Kit cho toàn hệ thống.</p>
-                    <div class="card-divider"></div>
-                    <div class="card-footer">
-                        <div class="author-box">
-                            <div class="author-avatar-fallback" style="background: #90d5ff;">H</div>
-                            <span class="author-name">Huy Ly</span>
+            </header>
+
+            <!-- Grid chứa 4 dự án -->
+            <div class="project-grid-v3">
+                <!-- Dự án đang đặt làm demo mẫu - không tuân theo Components -->
+                
+                <!-- Dự án 1 -->
+                <div class="project-card-v3">
+                    <div class="card-image-wrapper">
+                        <div class="card-badges">
+                            <span class="category-badge">UI/UX</span>
+                            <div class="status-dot"></div>
                         </div>
-                        <a href="https://webbcn.vercel.app/userPage.html" target="_blank" class="view-btn">Chi tiết &rarr;</a>
+                        <img src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
                     </div>
-                </div>
-            </div>
-
-            <!-- Dự án 2 -->
-            <div class="project-card-v3">
-                <div class="card-image-wrapper">
-                    <div class="card-badges">
-                        <span class="category-badge badge-backend">Backend</span>
-                        <div class="status-dot"></div>
-                    </div>
-                    <img src="https://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-date"><span>15/10/2025</span></div>
-                    <h3 class="card-title">Hệ thống API Fintech</h3>
-                    <p class="card-desc">Xây dựng hệ thống API bảo mật cao bằng Node.js và PostgreSQL, xử lý 10,000 giao dịch mỗi giây.</p>
-                    <div class="card-divider"></div>
-                    <div class="card-footer">
-                        <div class="author-box">
-                            <div class="author-avatar-fallback" style="background: #34495e;">A</div>
-                            <span class="author-name">Anh Tuan</span>
+                    <div class="card-content">
+                        <div class="card-date"><span>29/09/2025</span></div>
+                        <h3 class="card-title">Design Wireframe Project 1</h3>
+                        <p class="card-desc">Thiết kế dự án project 1 bằng Figma, chuẩn hoá và đồng bộ thư viện UI Kit cho toàn hệ thống.</p>
+                        <div class="card-divider"></div>
+                        <div class="card-footer">
+                            <div class="author-box">
+                                <div class="author-avatar-fallback" style="background: #90d5ff;">H</div>
+                                <span class="author-name">Huy Ly</span>
+                            </div>
+                            <a href="https://webbcn.vercel.app/userPage.html" target="_blank" class="view-btn">Chi tiết &rarr;</a>
                         </div>
-                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Dự án 3 -->
-            <div class="project-card-v3">
-                <div class="card-image-wrapper">
-                    <div class="card-badges">
-                        <span class="category-badge badge-frontend">Frontend</span>
-                        <div class="status-dot"></div>
-                    </div>
-                    <img src="https://plus.unsplash.com/premium_photo-1722156533656-b22cbcf1c82e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-date"><span>02/11/2025</span></div>
-                    <h3 class="card-title">E-commerce Dashboard</h3>
-                    <p class="card-desc">Giao diện quản lý bán hàng đa kênh tích hợp biểu đồ phân tích Real-time bằng React và Chart.js.</p>
-                    <div class="card-divider"></div>
-                    <div class="card-footer">
-                        <div class="author-box">
-                            <div class="author-avatar-fallback" style="background: #3498db;">M</div>
-                            <span class="author-name">Minh Khôi</span>
+                <!-- Dự án 2 -->
+                <div class="project-card-v3">
+                    <div class="card-image-wrapper">
+                        <div class="card-badges">
+                            <span class="category-badge badge-backend">Backend</span>
+                            <div class="status-dot"></div>
                         </div>
-                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                        <img src="https://plus.unsplash.com/premium_photo-1720201054067-adf2837be5e4?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
                     </div>
-                </div>
-            </div>
-
-            <!-- Dự án 4 -->
-            <div class="project-card-v3">
-                <div class="card-image-wrapper">
-                    <div class="card-badges">
-                        <span class="category-badge">Research</span>
-                        <div class="status-dot" style="background: #94a3b8; box-shadow: none;"></div>
-                    </div>
-                    <img src="https://plus.unsplash.com/premium_photo-1719930119165-f60297c43ee9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
-                </div>
-                <div class="card-content">
-                    <div class="card-date"><span>12/12/2025</span></div>
-                    <h3 class="card-title">AI Content Optimization</h3>
-                    <p class="card-desc">Nghiên cứu ứng dụng trí tuệ nhân tạo vào việc tối ưu hoá nội dung và trải nghiệm người dùng.</p>
-                    <div class="card-divider"></div>
-                    <div class="card-footer">
-                        <div class="author-box">
-                            <div class="author-avatar-fallback" style="background: #f43f5e;">L</div>
-                            <span class="author-name">Lan Anh</span>
+                    <div class="card-content">
+                        <div class="card-date"><span>15/10/2025</span></div>
+                        <h3 class="card-title">Hệ thống API Fintech</h3>
+                        <p class="card-desc">Xây dựng hệ thống API bảo mật cao bằng Node.js và PostgreSQL, xử lý 10,000 giao dịch mỗi giây.</p>
+                        <div class="card-divider"></div>
+                        <div class="card-footer">
+                            <div class="author-box">
+                                <div class="author-avatar-fallback" style="background: #34495e;">A</div>
+                                <span class="author-name">Anh Tuan</span>
+                            </div>
+                            <a href="#" class="view-btn">Chi tiết &rarr;</a>
                         </div>
-                        <a href="#" class="view-btn">Chi tiết &rarr;</a>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+                <!-- Dự án 3 -->
+                <div class="project-card-v3">
+                    <div class="card-image-wrapper">
+                        <div class="card-badges">
+                            <span class="category-badge badge-frontend">Frontend</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <img src="https://plus.unsplash.com/premium_photo-1722156533656-b22cbcf1c82e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-date"><span>02/11/2025</span></div>
+                        <h3 class="card-title">E-commerce Dashboard</h3>
+                        <p class="card-desc">Giao diện quản lý bán hàng đa kênh tích hợp biểu đồ phân tích Real-time bằng React và Chart.js.</p>
+                        <div class="card-divider"></div>
+                        <div class="card-footer">
+                            <div class="author-box">
+                                <div class="author-avatar-fallback" style="background: #3498db;">M</div>
+                                <span class="author-name">Minh Khôi</span>
+                            </div>
+                            <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 4 -->
+                <div class="project-card-v3">
+                    <div class="card-image-wrapper">
+                        <div class="card-badges">
+                            <span class="category-badge">Research</span>
+                            <div class="status-dot" style="background: #94a3b8; box-shadow: none;"></div>
+                        </div>
+                        <img src="https://plus.unsplash.com/premium_photo-1719930119165-f60297c43ee9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dự án 1" class="project-img">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-date"><span>12/12/2025</span></div>
+                        <h3 class="card-title">AI Content Optimization</h3>
+                        <p class="card-desc">Nghiên cứu ứng dụng trí tuệ nhân tạo vào việc tối ưu hoá nội dung và trải nghiệm người dùng.</p>
+                        <div class="card-divider"></div>
+                        <div class="card-footer">
+                            <div class="author-box">
+                                <div class="author-avatar-fallback" style="background: #f43f5e;">L</div>
+                                <span class="author-name">Lan Anh</span>
+                            </div>
+                            <a href="#" class="view-btn">Chi tiết &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
     <div id="footer-placeholder" class="container"></div>

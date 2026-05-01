@@ -1,8 +1,3 @@
-/**
- * user-details.js - Phiên bản SIÊU ỔN ĐỊNH
- * Tự động tìm dữ liệu và nạp vào Profile + Breadcrumb
- */
-
 (function() {
     // 1. Lấy ID từ URL (Vd: ?id=1)
     const urlParams = new URLSearchParams(window.location.search);
@@ -40,7 +35,7 @@
             if (elements.rank) elements.rank.innerText = user.stats;
             if (elements.uidLabel) elements.uidLabel.innerText = "UID: " + user.id + "-2026-X";
             if (elements.uidDisplay) elements.uidDisplay.innerText = user.id;
-            if (elements.level) elements.level.innerText = "Lv. " + (90 + (user.id % 10));
+            if (elements.level) elements.level.innerText = "Lv. " + (0 + (user.id % 10));
             
             if (elements.avatar) {
                 elements.avatar.src = user.avatarUrl;
