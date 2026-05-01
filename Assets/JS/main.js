@@ -88,10 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add(theme);
             localStorage.setItem('theme', theme);
             
-            // Cập nhật lại màu sắc biểu đồ nếu đang tồn tại
             if (skillChart) {
                 const textColor = isDark ? '#e5e7eb' : '#333';
-                const gridColor = isDark ? '#374151' : '#e5e7eb';
+                const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
                 
                 skillChart.options.scales.r.ticks.color = textColor;
                 skillChart.options.scales.r.grid.color = gridColor;
@@ -102,25 +101,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ========================================
-    // CHART INITIALIZATION
+    // CHART INITIALIZATION (TÙY CHỈNH BIỂU ĐỒ)
     // ========================================
     function initSkillChart() {
         const chartCanvas = document.getElementById('skillChart');
-        if (!chartCanvas) {
-            console.warn("[Warn] Không tìm thấy canvas skillChart để vẽ.");
-            return;
-        }
+        if (!chartCanvas) return;
         
-        if (typeof Chart === 'undefined') {
-            console.error("[Error] Thư viện Chart.js chưa được nạp vào trang.");
-            return;
-        }
-
         const ctx = chartCanvas.getContext('2d');
         const isDark = document.body.classList.contains('dark-mode');
-        const textColor = isDark ? '#e5e7eb' : '#333';
-        const gridColor = isDark ? '#374151' : '#e5e7eb';
-        
+
+        // Tạo màu Gradient cho vùng phủ
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(99, 102, 241, 0.6)');
+        gradient.addColorStop(1, 'rgba(139, 92, 246, 0.1)');
+
+        const textColor = isDark ? '#e5e7eb' : '#1e293b';
+        const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+
+        if (skillChart) {
+            skillChart.destroy();
+        }
+
         skillChart = new Chart(ctx, {
             type: 'radar',
             data: {
@@ -128,44 +129,51 @@ document.addEventListener("DOMContentLoaded", function () {
                 datasets: [{
                     label: 'Chỉ số năng lực',
                     data: currentSkills,
-                    borderColor: '#6366f1',
-                    backgroundColor: 'rgba(99, 102, 241, 0.15)',
-                    borderWidth: 3,
-                    pointRadius: 6,
-                    pointBackgroundColor: '#6366f1',
-                    pointBorderColor: '#fff',
+                    borderColor: '#6366f1', 
+                    borderWidth: 4,
+                    backgroundColor: gradient,
+                    tension: 0, // 0 = đường thẳng, 0.4 = đường cong
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#6366f1',
                     pointBorderWidth: 2,
+                    pointRadius: 5,
                     pointHoverRadius: 8,
                     fill: true
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                maintainAspectRatio: false, // CHO PHÉP TO NHỎ THEO CONTAINER
                 plugins: {
                     legend: { display: false },
                     tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        callbacks: {
-                            label: (context) => `${context.dataset.label}: ${context.parsed.r}/100`
-                        }
+                        backgroundColor: '#1e293b',
+                        padding: 12,
+                        cornerRadius: 8
                     }
                 },
                 scales: {
                     r: {
-                        min: 0,
-                        max: 100,
-                        beginAtZero: true,
-                        ticks: {
-                            color: textColor,
-                            stepSize: 20,
-                            backdropColor: 'transparent'
+                        grid: {
+                            color: gridColor,
+                            circular: false // FALSE = hình đa giác
                         },
-                        grid: { color: gridColor },
+                        angleLines: { color: gridColor },
+                        ticks: {
+                            display: false,
+                            stepSize: 10
+                        },
                         pointLabels: {
                             color: textColor,
-                            font: { size: 12, weight: 'bold' }
-                        }
+                            font: {
+                                size: 14,
+                                weight: 'bold',
+                                family: "'Inter', sans-serif"
+                            },
+                            padding: 15
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
                     }
                 }
             }
@@ -179,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("[Init] Bắt đầu nạp các thành phần giao diện...");
         
         try {
-            // Nạp đồng thời các component tĩnh (không phụ thuộc vào nhau)
             await Promise.all([
                 loadSingleComponent("header-placeholder", "../Components/header.html"),
                 loadSingleComponent("footer-placeholder", "../Components/footer.html"),
@@ -189,26 +196,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadSingleComponent("skill", "../Components/skill-radar.html")
             ]);
 
-            // Nạp nav-header trước vì ID "button-header" nằm bên trong component này
             await loadSingleComponent("nav-header", "../Components/navComponent.html");
-
-            // Sau khi nav-header nạp xong, ID "button-header" mới xuất hiện trong DOM để nạp tiếp
             await loadSingleComponent("button-header", "../Components/button-header.html");
 
-            // Nạp các thẻ User nếu có dữ liệu userData
             if (typeof userData !== 'undefined') {
                 await loadUserCards("user-slot", "../Components/card-user.html", userData);
             }
 
-            // Khởi tạo Chart sau khi HTML component đã được nạp
-            initSkillChart();
-            
-            // Khởi tạo tính năng đổi màu nền
+            setTimeout(initSkillChart, 150);
             initThemeToggle();
 
-            console.log("[Success] Toàn bộ trang, thẻ thành viên và biểu đồ đã sẵn sàng!");
+            console.log("[Success] Hoàn tất!");
         } catch (err) {
-            console.error("[Fatal] Khởi tạo trang thất bại:", err);
+            console.error("[Fatal] Lỗi:", err);
         }
     }
 

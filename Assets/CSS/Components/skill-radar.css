@@ -19,3 +19,13 @@
     height: 500px;
     padding: 20px;
 }
+
+/* TÙY CHỈNH KÍCH THƯỚC TẠI ĐÂY */
+#skill {
+    width: 600px;  /* Chiều rộng to/nhỏ tùy ý (ví dụ 400px, 800px, 100%) */
+    height: 500px; /* Chiều cao to/nhỏ tùy ý */
+    margin: 0 auto; /* Căn giữa */
+    position: relative;
+}
+
+/* Bằng cách này, khi bạn thay đổi giá trị `width` và `height` ở trên, biểu đồ bên trong sẽ tự động co giãn theo tỉ lệ tương ứng. */
