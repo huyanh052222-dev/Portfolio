@@ -1,3 +1,80 @@
-<div class="chart-container">
-    <canvas id="skillChart"></canvas>
-</div>
+<section class="mastery-dashboard">
+    
+    <div class="dashboard-header" data-aos="fade-up">
+        <div class="header-main-info">
+            <div class="title-head">Chỉ số năng lực</div>
+            <p class="section-secondary-subtitle">Phân tích đa chiều dựa trên trung bình dự án thực tế và chuyên môn.</p>
+        </div>
+    </div>
+    <div class="mastery-layout-wrapper glass-premium" data-aos="zoom-in">
+        <div class="chart-display-side">
+            <div class="chart-backdrop-glow"></div>
+            <div class="chart-canvas-container">
+                <canvas id="skillChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="insights-display-side">
+            <div class="insights-vertical-stack">
+                
+                <div class="insight-tile highlight-mode hover-trigger">
+                    <div class="tile-decoration"></div>
+                    <div class="tile-body">
+                        <span class="tile-category">KỸ NĂNG ƯU VIỆT</span>
+                        <h3 class="tile-main-value">Thái độ & kỉ luật</h3>
+                        <div class="mastery-status-bar">
+                            <div class="status-meta">
+                                <span>Điểm hoàn thiện</span>
+                                <span>92</span>
+                            </div>
+                            <div class="status-track">
+                                <div class="status-fill" style="width: 0%;" data-target="92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-tile rank-card">
+                    <span class="tile-category">XẾP HẠNG CỘNG ĐỒNG</span>
+                    <div class="rank-list-stack">
+                        <div class="rank-row dimmed">
+                            <div class="rank-number">41</div>
+                            <div class="rank-name">Người dùng ẩn danh</div>
+                        </div>
+                        <div class="rank-row active-user">
+                            <div class="rank-number">42</div>
+                            <div class="rank-name">Bạn (Hiện tại)</div>
+                        </div>
+                        <div class="rank-row dimmed">
+                            <div class="rank-number">43</div>
+                            <div class="rank-name">Người dùng ẩn danh</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insight-tile prestige-mode">
+                    <div class="tile-glow-effect"></div>
+                    <div class="tile-body">
+                        <span class="tile-category">DỰ ÁN XUẤT SẮC NHẤT</span>
+                        <h3 class="rank-designation">Design Wireframe Project 1</h3>
+                        <div class="project-impact-grid">
+                            <div class="impact-box">
+                                <span class="impact-label">VAI TRÒ</span>
+                                <span class="impact-val">Lead Frontend</span>
+                            </div>
+                            <div class="impact-box">
+                                <span class="impact-label">ĐÓNG GÓP</span>
+                                <span class="impact-val">95 Core Logic</span>
+                            </div>
+                        </div>
+                        <div class="rank-tag-group">
+                            <span class="rank-tag">High Perf</span>
+                            <span class="rank-tag">Elite Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

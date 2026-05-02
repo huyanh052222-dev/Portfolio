@@ -10,6 +10,16 @@ const skillLabels = [
     'Hiệu suất học tập',
     'Tư duy sản phẩm'
 ];
+
+const skillDefinitions = {
+    'Kiến thức chuyên môn': 'Khả năng nắm vững lý thuyết, thư viện và kiến trúc hệ thống lõi.',
+    'Làm việc nhóm': 'Năng lực phối hợp, giao tiếp và hỗ trợ đồng đội trong dự án.',
+    'Thái độ & Kỷ luật': 'Sự chuyên nghiệp, tinh thần trách nhiệm và tuân thủ quy trình.',
+    'Giải quyết vấn đề': 'Tư duy logic để phân tích bài toán và tìm ra giải pháp tối ưu.',
+    'Hiệu suất học tập': 'Tốc độ nghiên cứu, tiếp thu và làm chủ các công nghệ mới.',
+    'Tư duy sản phẩm': 'Góc nhìn từ phía người dùng để tối ưu hóa tính năng và trải nghiệm.'
+};
+
 const initialSkills = [88, 85, 92, 90, 87, 84];
 let currentSkills = [...initialSkills];
 
@@ -91,8 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (skillChart) {
                 const textColor = isDark ? '#e5e7eb' : '#333';
                 const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-                
-                skillChart.options.scales.r.ticks.color = textColor;
                 skillChart.options.scales.r.grid.color = gridColor;
                 skillChart.options.scales.r.pointLabels.color = textColor;
                 skillChart.update();
@@ -101,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ========================================
-    // CHART INITIALIZATION (TÙY CHỈNH BIỂU ĐỒ)
+    // CHART INITIALIZATION (NÂNG CẤP HOVER & ANIMATION)
     // ========================================
     function initSkillChart() {
         const chartCanvas = document.getElementById('skillChart');
@@ -110,17 +118,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const ctx = chartCanvas.getContext('2d');
         const isDark = document.body.classList.contains('dark-mode');
 
-        // Tạo màu Gradient cho vùng phủ
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(0, 4, 255, 0.6)');
-        gradient.addColorStop(1, 'rgba(92, 192, 246, 0.1)');
+        const gradient = ctx.createRadialGradient(ctx.canvas.width / 2, ctx.canvas.height / 2, 0, ctx.canvas.width / 2, ctx.canvas.height / 2, 200);
+        gradient.addColorStop(0, 'rgba(29, 131, 255, 0.6)');
+        gradient.addColorStop(1, 'rgba(29, 131, 255, 0.05)');
 
         const textColor = isDark ? '#e5e7eb' : '#25354d';
         const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
 
-        if (skillChart) {
-            skillChart.destroy();
-        }
+        if (skillChart) skillChart.destroy();
 
         skillChart = new Chart(ctx, {
             type: 'radar',
@@ -130,47 +135,42 @@ document.addEventListener("DOMContentLoaded", function () {
                     label: 'Chỉ số năng lực',
                     data: currentSkills,
                     borderColor: '#1d83ff', 
-                    borderWidth: 4,
+                    borderWidth: 3,
                     backgroundColor: gradient,
-                    tension: 0, // 0 = đường thẳng, 0.4 = đường cong
                     pointBackgroundColor: '#fff',
                     pointBorderColor: '#1d83ff',
-                    pointBorderWidth: 2,
                     pointRadius: 5,
-                    pointHoverRadius: 8,
-                    fill: true
+                    pointHoverRadius: 10,
+                    fill: true,
+                    tension: 0.15
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // CHO PHÉP TO NHỎ THEO CONTAINER
+                maintainAspectRatio: false,
+                animation: { duration: 2000, easing: 'easeOutQuart' },
                 plugins: {
                     legend: { display: false },
                     tooltip: {
-                        backgroundColor: '#1e293b',
+                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
                         padding: 12,
-                        cornerRadius: 8
+                        cornerRadius: 10,
+                        displayColors: false,
+                        callbacks: {
+                            label: (context) => ` Chỉ số: ${context.parsed.r}/100`,
+                            footer: (context) => '\n' + (skillDefinitions[context[0].label] || '')
+                        }
                     }
                 },
                 scales: {
                     r: {
-                        grid: {
-                            color: gridColor,
-                            circular: false // FALSE = hình đa giác
-                        },
+                        grid: { color: gridColor },
                         angleLines: { color: gridColor },
-                        ticks: {
-                            display: false,
-                            stepSize: 10
-                        },
+                        ticks: { display: false },
                         pointLabels: {
                             color: textColor,
-                            font: {
-                                size: 14,
-                                weight: 'bold',
-                                family: "'Inter', sans-serif"
-                            },
-                            padding: 15
+                            font: { size: 13, weight: '700' },
+                            padding: 20
                         },
                         suggestedMin: 0,
                         suggestedMax: 100
@@ -178,19 +178,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         });
+
+        // Animation cho Progress Bar trong tile
+        setTimeout(() => {
+            const statusFill = document.querySelector('.status-fill');
+            if (statusFill) statusFill.style.width = '92%';
+        }, 500);
     }
 
     // ========================================
     // PAGE INITIALIZATION FLOW
     // ========================================
     async function initPage() {
-        console.log("[Init] Bắt đầu nạp các thành phần giao diện...");
+        console.log("[Init] Đang nạp toàn bộ thành phần...");
         
         try {
             await Promise.all([
                 loadSingleComponent("header-placeholder", "../Components/header.html"),
                 loadSingleComponent("footer-placeholder", "../Components/footer.html"),
-                loadSingleComponent("badge-section", "../Components/badge.html"),
+                loadSingleComponent("badge-section", "../Components/badge.html"), // ĐÃ NẠP LẠI Ở ĐÂY
                 loadSingleComponent("breadcrumb-placeholder", "../Components/breadcrumb.html"),
                 loadSingleComponent("linkContact", "../Components/linkContact.html"),
                 loadSingleComponent("skill", "../Components/skill-radar.html")
@@ -203,12 +209,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 await loadUserCards("user-slot", "../Components/card-user.html", userData);
             }
 
-            setTimeout(initSkillChart, 150);
             initThemeToggle();
+            // Đợi một chút để component 'skill' nạp xong canvas trước khi vẽ chart
+            setTimeout(initSkillChart, 200);
 
-            console.log("[Success] Hoàn tất!");
+            console.log("[Success] Hoàn tất nạp Badge và các thành phần khác!");
         } catch (err) {
-            console.error("[Fatal] Lỗi:", err);
+            console.error("[Fatal Error]:", err);
         }
     }
 
