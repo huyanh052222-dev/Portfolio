@@ -6,13 +6,13 @@
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(130px, auto);
+    grid-auto-rows: minmax(120px, auto);
     gap: 16px; /* Thu hẹp gap để gọn hơn */
     grid-template-areas: 
-        "profile hero hero hero"
-        "profile bio bio skills"
-        "exp bio bio project"
-        "exp contact stats actions";
+        "profile hero hero A"
+        "profile bio bio A"
+        "contact stats B  actions"
+        /* "skills skills exp exp"; */
 }
 
 .bento-card {
@@ -34,13 +34,102 @@
     box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.1);
 }
 
-.profile-area { 
-    grid-area: profile;
+.project-preview-best {
+    background: var(--bg-linear-gradient); 
+    border-radius: 16px; 
+    min-height: 80px; 
+    margin-top: 10px; 
+    display: flex; 
     align-items: center; 
-    text-align: center; 
-    justify-content: 
-    center; 
+    justify-content: center; 
+    font-weight: 700; 
+    color: #fff;
+    flex: 1;
+    cursor: pointer;
 }
+
+.wrap-project-review {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.view-all {
+    width: 90px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 16px;
+    text-align: center;
+    align-content: center;
+    background-color: var(--text-main);
+    font-size: 10px;
+    color: #fff;
+}
+
+.wrap-bg-best-project {
+    max-width: 300px;
+    position: relative;
+
+}
+
+.project-best-img {
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.black-bg {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    background-color: #00000000;
+    color: #00000000;
+    padding-top: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 12px;
+}
+
+.wrap-tect {
+    display: flex;
+}
+
+.dot {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00000000;
+    margin: 8px;
+}
+
+.wrap-bg-best-project:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    .black-bg {
+        color: #fff;
+        background-color: #00000095;
+        transition: 0.4s;
+        .dot {
+            background-color: var(--primary-color);
+        }
+    }
+}
+
+.profile-area {
+    grid-area: profile;
+    text-align: center;
+}
+
 .hero-area { 
     grid-area: hero;
     background: none; 
@@ -55,7 +144,7 @@
     background: #fff; 
 }
 
-.skills-area  { 
+/* .skills-area  { 
     grid-area: skills;
     gap: 8px; 
 }
@@ -65,17 +154,27 @@
     justify-content: center; 
     gap: 12px; 
     background: #fff; 
-}
+} */
 
-.project-area { 
-    grid-area: project;
-}
 .stats-area { 
     grid-area: stats; 
+    /* background: var(--text-main);  */
+    /* color: #fff;  */
+    align-items: center; 
+    justify-content: center; 
+}
+
+.B { 
+    grid-area: B; 
     background: var(--text-main); 
     color: #fff; 
     align-items: center; 
     justify-content: center; 
+    gap: 6px;
+}
+
+.A {
+    grid-area: A;
 }
 
 .contact-area { 
@@ -83,6 +182,23 @@
     flex-direction: row; 
     justify-content: space-around; 
     align-items: center; 
+}
+
+.download-icon-wrap {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.download-icon {
+    mask-image: url(../../Images/Icons/download\ icon.svg);
+    background-color: var(--text-main);
+    width: 20px;
+    height: 20px;
 }
 
 /* .actions-area { 
@@ -135,9 +251,9 @@
 }
 
 .main-title { 
-    font-size: 56px; 
+    font-size: 80px; 
     font-weight: 900; 
-    line-height: 1.1; 
+    line-height: 1.2; 
     text-transform: uppercase; 
     letter-spacing: -2px; 
 }
@@ -589,5 +705,11 @@
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
 }
 
-.actions-area:hover .actions-glow { opacity: 1; }
-.actions-area:hover .actions-arrow { transform: translateX(10px); }
+.actions-area:hover .actions-glow { 
+    opacity: 1; 
+}
+
+.actions-area:hover .actions-arrow { 
+    transform: translateX(10px); 
+
+}
