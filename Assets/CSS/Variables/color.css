@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1d83ff;
-    --bg-linear-gradient: linear-gradient(135deg, var(--primary-color), #6366f1); 
+    --bg-linear-gradient: linear-gradient(135deg, #946aff, #3ab7fb); 
     --second-color: rgba(255, 0, 162, 0.913);
     --light-color: #fefefe;
     --light-color-darker: #f1f1f1;
