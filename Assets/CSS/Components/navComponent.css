@@ -266,3 +266,10 @@
     background: var(--primary-gradient);
     animation: bell-swing 0.8s ease;
 }
+
+.wrap-navbar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}

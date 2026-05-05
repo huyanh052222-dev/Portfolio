@@ -635,15 +635,6 @@
     gap: 4px;
 }
 
-/* @media (max-width: 1100px) {
-    .bento-grid { grid-template-columns: 1fr 1fr; grid-template-areas: "hero hero" "profile bio" "profile bio" "skills stats" "exp project" "contact actions"; }
-    .main-title { font-size: 40px; }
-}
-
-@media (max-width: 600px) {
-    .bento-grid { grid-template-columns: 1fr; grid-template-areas: "hero" "profile" "bio" "skills" "exp" "project" "stats" "contact" "actions"; }
-} */
-
 .actions-area { 
     grid-area: actions; 
     position: relative;
