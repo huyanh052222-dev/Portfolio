@@ -116,7 +116,7 @@
 }
 
 .rank-row.active-user {
-    background: var(--primary-color);
+    background: var(--bg-linear-gradient);
     color: white;
     box-shadow: var(--premium-shadow);
     animation: slideIn 0.3s ease-out;
