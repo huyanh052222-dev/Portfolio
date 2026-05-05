@@ -6,11 +6,14 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
+
 .example-2 .icon-content {
     margin: 0 10px;
     position: relative;
 }
+
 .example-2 .icon-content .tooltip {
     position: absolute;
     top: -30px;
@@ -24,11 +27,13 @@ ul {
     font-size: 14px;
     transition: all 0.3s ease;
 }
+
 .example-2 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
 }
+
 .example-2 .icon-content a {
     position: relative;
     overflow: hidden;

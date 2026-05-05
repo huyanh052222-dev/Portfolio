@@ -12,7 +12,8 @@
         "profile hero hero A"
         "profile bio bio A"
         "contact stats B  actions"
-        /* "skills skills exp exp"; */
+        /* "skills skills exp exp"; */;
+        overflow: none;
 }
 
 .bento-grid-2 {
@@ -177,10 +178,10 @@
 
 .stats-area { 
     grid-area: stats; 
-    /* background: var(--text-main);  */
-    /* color: #fff;  */
     align-items: center; 
     justify-content: center; 
+    flex-direction: row;
+    gap: 20px;
 }
 
 .B { 
@@ -220,16 +221,27 @@
     height: 20px;
 }
 
-/* .actions-area { 
-    grid-area: actions; 
-    background: var(--primary-color); 
-    color: #fff; 
-    justify-content: center; 
-    align-items: center; 
-    text-decoration: none; 
-    font-weight: 700; 
-    font-size: 20px;
-} */
+.wrap-xem-project {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-linear-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.wrap-xem-project:hover {
+    transform: scale(1.05);
+    
+}
+
+.discover-icon {
+    mask-image: url(../../Images/Icons/discover-icon.svg);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
 
 .tag-member {
     margin-top: 10px;

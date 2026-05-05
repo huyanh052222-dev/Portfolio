@@ -37,6 +37,10 @@ body {
     line-height: 1.5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ========== Avatar của người sử dụng ========== */
 .avatar {
     background-image: url(../Images/Users/Avatars/Test_Avatar.jpg);
