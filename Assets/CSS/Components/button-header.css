@@ -1,7 +1,8 @@
 .button-header {
     background: var(--bg-linear-gradient);
-    color: rgb(246, 246, 246);
+    color: #f6f6f6;
     padding: 10px 20px;
     border-radius: 30px;
     cursor: pointer;
+    display: flex;
 }

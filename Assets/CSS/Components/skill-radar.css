@@ -68,6 +68,16 @@
     border-color: var(--primary-color);
 }
 
+.tile-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tile-body-icon {
+    width: 68px;
+    height: 68px;
+}
+
 .tile-category {
     font-size: 10px;
     text-transform: uppercase;
