@@ -1,7 +1,8 @@
 .button-header {
     background: var(--bg-linear-gradient);
     color: rgb(246, 246, 246);
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 30px;
     cursor: pointer;
+    font-size: 16px;
 }

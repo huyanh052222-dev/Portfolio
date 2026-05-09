@@ -37,7 +37,7 @@
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
-    padding: 10px 60px;
+    padding: 0 60px;
     margin-top: 30px;
     border-radius: 30px;
     box-shadow: var(--premium-shadow);

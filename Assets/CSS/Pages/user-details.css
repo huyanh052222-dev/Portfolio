@@ -39,12 +39,6 @@
     flex-direction: column;
 }
 
-.bento-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-    box-shadow: 0 25px 50px -20px rgba(0, 0, 0, 0.1);
-}
-
 .project-preview-best {
     border: 1px solid var(--primary-color);
     border-radius: 16px; 
@@ -370,11 +364,6 @@
     box-shadow: var(--premium-shadow);
     border: 1px solid #f1f5f9;
     margin-top: 20px;
-}
-
-.achievement-wrapper:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
 }
 
 /* Header chia làm 2 bên */
